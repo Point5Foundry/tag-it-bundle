@@ -1,12 +1,13 @@
 {
     "name":"pff/tag-it-bundle",
     "description":"Bundle to help use the Tag It library",
+    "version": "master",
     "autoload":{
         "psr-0":{
             "Pff\\Bundle\\TagItBundle": ""
         }
     },
-    "target-dir":"Pff/Bundle/TagItBundle",
+    "target-dir": "Pff/Bundle/TagItBundle",
     "repositories":[
         {
             "type":"package",
@@ -22,6 +23,14 @@
             }
         }
     ],
+    "scripts": {
+        "post-install-cmd": [
+            "Pff\\Bundle\\TagItBundle\\Composer\\ScriptHandler::postInstallSymlinkTagIt"
+        ],
+        "post-update-cmd": [
+            "Pff\\Bundle\\TagItBundle\\Composer\\ScriptHandler::postInstallSymlinkTagIt"
+        ]
+    },
     "require": {
         "mopa/composer-bridge": "dev-master",
         "aehlke/tag-it": "dev-master"
