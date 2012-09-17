@@ -23,6 +23,7 @@
         }
     ],
     "require": {
+        "mopa/composer-bridge": "dev-master",
         "aehlke/tag-it": "dev-master"
     }
 }
