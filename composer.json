@@ -19,7 +19,7 @@
 			}
 		}
 	},
-	"require" {
+	"require": {
 		"aehlke/tag-it": "dev-master"
 	}
 }
