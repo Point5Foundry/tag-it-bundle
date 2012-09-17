@@ -4,7 +4,7 @@
  *
  * Maybe nice to convert this to a command and then reuse command in here.
  */
-namespace Mopa\Bundle\BootstrapBundle\Composer;
+namespace Pff\Bundle\TagItBundle\Composer;
 
 use Composer\Script\Event;
 use Mopa\Bridge\Composer\Util\ComposerPathFinder;
