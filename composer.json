@@ -1,27 +1,28 @@
 {
-	"name": "pff/tag-it-bundle",
-	"description": "Bundle to help use the Tag It library",
-	"autoload": {
-		"psr-0": { "Pff\\Bundle\\TagItBundle" }
-	},
-	"target-dir": "Pff/Bundle/TagItBundle",
-	"repositories": [
-		{
-			"type": "package",
-			"package": {
-			"name": "aehlke/tag-it",
-			"version": "dev-master",
-			"source": {
-                    
-				"url": "git://github.com/aehlke/tag-it.git",
-				"type": "git",
-				"reference": "master"
-			}
-		}
-	},
-	"require": {
-		"aehlke/tag-it": "dev-master"
-	}
+    "name":"pff/tag-it-bundle",
+    "description":"Bundle to help use the Tag It library",
+    "autoload":{
+        "psr-0":{
+            "Pff\\Bundle\\TagItBundle": ""
+        }
+    },
+    "target-dir":"Pff/Bundle/TagItBundle",
+    "repositories":[
+        {
+            "type":"package",
+            "package":{
+                "name":"aehlke/tag-it",
+                "version":"dev-master",
+                "source":{
+
+                    "url":"git://github.com/aehlke/tag-it.git",
+                    "type":"git",
+                    "reference":"master"
+                }
+            }
+        }
+    ],
+    "require": {
+        "aehlke/tag-it": "dev-master"
+    }
 }
-
-
