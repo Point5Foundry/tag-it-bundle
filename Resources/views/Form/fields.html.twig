@@ -1,5 +1,13 @@
+{% javascripts '@PffTagItBundle/Resources/tag-it/js/*.js' %}
+<script type="text/javascript" src="{{ asset_url }}"></script>
+{% endjavascripts %}
+{% stylesheets '@PffTagItBundle/Resources/tag-it/css/*.css' %}
+<link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+{% endstylesheets %}
 {% block tagit_widget %}
 {% set type = type|default('text') %}
 {{ block('form_widget_simple') }}
-Hello!
-{% endblock %}
+{% block javascripts %}
+
+{% endblock javascripts %}
+{% endblock tagit_widget %}

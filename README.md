@@ -51,3 +51,8 @@ Huge thanks to the Mopa Bootstrap bundle for ideas on how to handle this!
         form:
             resources:
                 - 'PffTagItBundle:Form:fields.html.twig'
+
+### Add the bundle to assetic management in `config.yml`
+
+    assetic:
+        bundles: [ PffTagItBundle ]
