@@ -6,11 +6,11 @@
         var tFunc = function(url) {
             return function(search, callback)
             {
-                $.post(url, {term: search.term }, callback, 'json');
+                $.post(url, { term: search.term, limit: '{{ attr.tag_limit }}' }, callback, 'json');
             }
         };
         $("#{{ id }}").tagit({
-            'tagSource': tFunc('{{ data_path }}'),
+            'tagSource': tFunc('{{ attr.data_path }}'),
             'allowSpaces': true
         });
     });

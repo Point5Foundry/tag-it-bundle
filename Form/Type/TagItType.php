@@ -34,7 +34,7 @@ class TagItType extends AbstractType
     }
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
-        $view->vars['data_path'] = $options['data_path'];
-        $view->vars['tag_limit'] = $options['tag_limit'];
+        $view->vars['attr']['data_path'] = $options['data_path'];
+        $view->vars['attr']['tag_limit'] = $options['tag_limit'];
     }
 }
