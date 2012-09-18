@@ -1,4 +1,5 @@
 {% block tagit_widget %}
-        {{ block('text_widget') }}
-        Hello!
+{% set type = type|default('text') %}
+{{ block('form_widget_simple') }}
+Hello!
 {% endblock %}
