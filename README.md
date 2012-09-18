@@ -52,7 +52,17 @@ Huge thanks to the Mopa Bootstrap bundle for ideas on how to handle this!
             resources:
                 - 'PffTagItBundle:Form:fields.html.twig'
 
-### Add the bundle to assetic management in `config.yml`
+### In the template you want to use the Tag It form field in:
 
-    assetic:
-        bundles: [ PffTagItBundle ]
+    {% block javascripts %}
+        {{ parent() }}
+        {% javascripts '@PffTagItBundle/Resources/tag-it/js/*.js' %}
+            <script type="text/javascript" src="{{ asset_url }}"></script>
+        {% endjavascripts %}
+    {% endblock javascripts %}
+    {% block stylesheets %}
+        {{ parent() }}
+        {% stylesheets '@PffTagItBundle/Resources/tag-it/css/*.css' %}
+            <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+        {% endstylesheets %}
+    {% endblock stylesheets %}
