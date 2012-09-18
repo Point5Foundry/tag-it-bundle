@@ -62,7 +62,7 @@ Huge thanks to the Mopa Bootstrap bundle for ideas on how to handle this!
     {% endblock javascripts %}
     {% block stylesheets %}
         {{ parent() }}
-        {% stylesheets '@PffTagItBundle/Resources/tag-it/css/*.css' %}
+        {% stylesheets '@PffTagItBundle/Resources/css/jquery.tagit.css' output="css/compiled/tag-it.css" %}
             <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
         {% endstylesheets %}
     {% endblock stylesheets %}
