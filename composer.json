@@ -35,6 +35,7 @@
         ]
     },
     "require": {
-        "mopa/composer-bridge": "dev-master"
+        "mopa/composer-bridge": "dev-master",
+        "symfony/form": "2.1.*"
     }
 }
