@@ -44,3 +44,10 @@ Huge thanks to the Mopa Bootstrap bundle for ideas on how to handle this!
         }
         // ...
     }
+
+### Add the form template to `config.yml`
+
+    twig:
+        form:
+            resources:
+                - 'PffTagItBundle:Form:fields.html.twig'

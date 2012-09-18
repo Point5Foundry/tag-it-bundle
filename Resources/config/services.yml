@@ -2,6 +2,7 @@ parameters:
 #    pff_tag_it.example.class: Pff\TagItBundle\Example
 
 services:
-#    pff_tag_it.example:
-#        class: %pff_tag_it.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    pff_tag_it.type.tagit:
+        class: Pff\Bundle\TagItBundle\Form\Type\TagItType
+        tags:
+            - { name: form.type, alias: tagit }
