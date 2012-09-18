@@ -4,6 +4,12 @@ namespace Pff\Bundle\TagItBundle\Form\Type;
 
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\OptionsResolver\OptionsResolverInterface;
+use Symfony\Component\Form\FormBuilder;
+use Symfony\Component\Form\FormView;
+use Symfony\Component\Form\FormInterface;
+use Symfony\Component\Form\FormError;
+use Symfony\Component\Form\CallbackValidator;
+use Symfony\Component\Form\FormValidatorInterface;
 
 class TagItType extends AbstractType
 {
@@ -22,5 +28,9 @@ class TagItType extends AbstractType
     public function getName()
     {
         return 'tagit';
+    }
+    public function buildView(FormView $view, FormInterface $form, array $options)
+    {
+        $view->vars['attr']['data_path'] = $options['data_path'];
     }
 }
