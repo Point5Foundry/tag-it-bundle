@@ -1,13 +1,17 @@
+{% block javascripts %}
+{{ parent() }}
 {% javascripts '@PffTagItBundle/Resources/tag-it/js/*.js' %}
 <script type="text/javascript" src="{{ asset_url }}"></script>
 {% endjavascripts %}
+{% endblock javascripts %}
+{% block stylesheets %}
+{{ parent() }}
 {% stylesheets '@PffTagItBundle/Resources/tag-it/css/*.css' %}
 <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
 {% endstylesheets %}
+{% endblock stylesheets %}
 {% block tagit_widget %}
 {% set type = type|default('text') %}
 {{ block('form_widget_simple') }}
-{% block javascripts %}
 
-{% endblock javascripts %}
 {% endblock tagit_widget %}
