@@ -15,6 +15,9 @@ class TagItType extends AbstractType
 {
     public function setDefaultOptions(OptionsResolverInterface $resolver)
     {
+        $resolver->setDefaults(array(
+            'tag_limit' => 10
+        ));
         $resolver->setRequired(array(
             'data_path'
         ));
@@ -31,6 +34,7 @@ class TagItType extends AbstractType
     }
     public function buildView(FormView $view, FormInterface $form, array $options)
     {
-        $view->vars['attr']['data_path'] = $options['data_path'];
+        $view->vars['data_path'] = $options['data_path'];
+        $view->vars['tag_limit'] = $options['tag_limit'];
     }
 }

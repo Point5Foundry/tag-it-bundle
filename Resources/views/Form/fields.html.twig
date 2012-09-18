@@ -3,7 +3,16 @@
 {{ block('form_widget_simple') }}
 <script type="text/javascript">
     $(function() {
-        var data_url = '{{ attr.data_path }}';
+        var tFunc = function(url) {
+            return function(search, callback)
+            {
+                $.post(url, {term: search.term }, callback, 'json');
+            }
+        };
+        $("#{{ id }}").tagit({
+            'tagSource': tFunc('{{ data_path }}'),
+            'allowSpaces': true
+        });
     });
 </script>
 {% endblock tagit_widget %}
