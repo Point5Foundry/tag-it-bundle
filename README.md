@@ -66,3 +66,22 @@ Huge thanks to the Mopa Bootstrap bundle for ideas on how to handle this!
             <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
         {% endstylesheets %}
     {% endblock stylesheets %}
+
+
+## Usage
+
+### In your object
+
+    /**
+     * @ORM\Column(type="text", nullable=true)
+     */
+    protected $tags;
+
+
+### Finally to implement in your form
+
+    ->add('tags', 'tagit', array(
+        'required' => false,
+        'label' => 'Tags',
+        'data_path' => $this->container->get('router')->generate('my_tag_list'),
+    ))
