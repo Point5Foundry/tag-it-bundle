@@ -24,9 +24,12 @@ Huge thanks to the Mopa Bootstrap bundle for ideas on how to handle this!
             }
         ],
         "require": {
+            // all your existing requires
+            ...
             "pff/tag-it-bundle": "dev-master",
             "aehlke/tag-it": "dev-master"
-        }
+            ...
+        },
         // ...
     }
 
